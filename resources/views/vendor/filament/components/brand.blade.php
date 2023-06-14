@@ -1,0 +1,1 @@
+<span class="font-bold text-xl text-primary-400 ">invento</span>
