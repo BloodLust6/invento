@@ -41,10 +41,6 @@ class CategoryResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('products_count')
-                    ->counts('products')
-                    ->sortable()
-                    ->label('Products'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->since()
