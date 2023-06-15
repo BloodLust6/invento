@@ -42,6 +42,11 @@ class UserResource extends Resource
                     ->required(fn (string $context): bool => $context === 'create'),
                 Forms\Components\Toggle::make('is_admin')
                     ->required(),
+                    Forms\Components\FileUpload::make('user picture')
+                    ->disk('s3')
+                    ->directory('form-attachments')
+                    ->visibility('private')
+                    ->required()
             ]);
     }
 
