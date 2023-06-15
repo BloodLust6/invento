@@ -33,6 +33,10 @@ class StockValue extends BaseWidget
         return [
             Card::make('Purchase Total', money($purchase_total, 'myr', true)),
             Card::make('Sale Total', money($sale_total, 'myr', true)),
+            Card::make('Profit', money($profit, 'myr', true))
+                ->description($percentage . '%')
+                ->descriptionIcon($icon)
+                ->color($color),
         ];
     }
 }
