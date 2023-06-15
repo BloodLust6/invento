@@ -167,6 +167,9 @@ class OrderResource extends Resource
                     ->toggle()
             ])
             ->actions([
+                Action::make('Export')
+                    ->icon('heroicon-o-download')
+                    ->url(fn ($record) => route('export.order', $record->id)),
                 EditAction::make()
             ])
             ->bulkActions([
